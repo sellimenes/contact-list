@@ -1,11 +1,13 @@
 import React from "react";
-import Form from "./Form";
-import "./List.css";
 
-function List() {
+function List({ contacts }) {
   return (
-    <div className="list">
-      <Form />
+    <div>
+      <ul>
+        {contacts.map((contact, i) => (
+          <li key={i}>{contact.fullname}</li>
+        ))}
+      </ul>
     </div>
   );
 }
