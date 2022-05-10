@@ -29,6 +29,7 @@ function Form({ addContact, contacts }) {
           placeholder="Name"
           value={form.fullname}
           onChange={onChangeInput}
+          className="inputs"
         />
       </div>
       <div>
@@ -37,10 +38,11 @@ function Form({ addContact, contacts }) {
           placeholder="Phone Number"
           value={form.phone_number}
           onChange={onChangeInput}
+          className="inputs"
         />
       </div>
-      <div>
-        <button>Add</button>
+      <div className="addButton__div">
+        <button className="addButton">Add</button>
       </div>
     </form>
   );
