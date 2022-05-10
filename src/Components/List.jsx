@@ -2,11 +2,6 @@ import { useState } from "react";
 
 function List({ contacts }) {
   const [filterText, setFilterText] = useState("");
-  const [listShows, setListShows] = useState("");
-
-  const MouseEnter = () => {
-    contacts.fullname = contacts.phone_number;
-  };
 
   const filtered = contacts.filter((item) => {
     return Object.keys(item).some((key) =>
@@ -24,7 +19,7 @@ function List({ contacts }) {
       />
       <ul className="listUl">
         {filtered.map((contact, i) => (
-          <li key={i} className="list" onMouseEnter={MouseEnter}>
+          <li key={i} className="list" onMouseEnter={contact.fullname}>
             {contact.fullname}
           </li>
         ))}
